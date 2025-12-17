@@ -1,0 +1,7 @@
+# Eclipse workspace
+.metadata/
+
+# Tomcat
+logs/
+tmp0/
+work/
