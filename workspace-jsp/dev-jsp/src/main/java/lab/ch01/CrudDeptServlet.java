@@ -60,11 +60,14 @@ public class CrudDeptServlet extends HttpServlet {
 		list.add(map);	
 		//요청이 유지되는 동안에는 이 주소번지로 공유가능함.
 		//공유가 안되면 NullPointerException -> 500 -> Runtime에러
+		//setAttribute의 소유주는 요청객체이다.
+		//setAttribute의 파라미터는 두 가지이다.
 		req.setAttribute("list", list);
 		//jsp페이지 호출하기 - forward로 해야한다.
 		//왜냐하면 servlet과 jsp가 요청이 계속 유지되고 있다.
 		//비상태 프로토콜이란 요청 URL이 바뀌면 기존에 요청이 끊어지고 새로운요 청이 발생함.
 		//유지가 안됨
+		//기존의 요청 URL이 그대로 인데 실제 화면은 /dept/deptList.jsp가 출력됨
 		RequestDispatcher view = req.getRequestDispatcher("/dept/deptList.jsp");
 		view.forward(req, resp);
 		
