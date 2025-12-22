@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 /*
  * 웹요청을 받아서 자바코드로 응답을 만드는 서버 프로그램
  * 역할 : 요청 수신(사용자가 입력한 아이디와 비번을 청취), 로직처리, HTML/JSON 응답 생성
